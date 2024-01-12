@@ -20,10 +20,13 @@ For more **open source** software provided by [**Fraunhofer ISI**](https://www.i
 ## micat-next
 
 This project contains a **!!deprecated!!** front-end for MICAT, based on [next.js](https://nextjs.org/).
+
 For the current version of the front-end see [micat-vue](https://github.com/fraunhofer-isi/micat-vue).
+
 For the back-end see [micat](https://github.com/fraunhofer-isi/micat).
 
 Deprecated demo page:
+
 https://fraunhofer-isi.github.io/micat-next/
 
 ## Licenses
