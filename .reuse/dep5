@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
-Files: /*.json
+Files: .eslintrc.json .prettierrc.json .settings.default.json .stylelintrc.json babel.config.json package.json
 Copyright: 2024 Fraunhofer-Gesellschaft e.V., München
 License: AGPL-3.0-or-later
