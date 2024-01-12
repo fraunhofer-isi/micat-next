@@ -24,6 +24,5 @@ jobs:
         npx next telemetry disable
         npm install
     - name: build
-      run: |
-        cd front_end  
+      run: |       
         npm run build

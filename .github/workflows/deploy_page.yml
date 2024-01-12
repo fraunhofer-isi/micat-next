@@ -43,7 +43,6 @@ jobs:
           npm install
       - name: build
         run: |
-          cd front_end  
           npm run build
       - name: setup github pages
         uses: actions/configure-pages@v3
