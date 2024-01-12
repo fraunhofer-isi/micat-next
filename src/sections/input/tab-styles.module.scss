@@ -1,0 +1,41 @@
+/*
+ * © 2024 Fraunhofer-Gesellschaft e.V., München
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+.tab-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: inherit;
+  margin: 5px 5px 5px 5px;
+}
+
+.tab-list [aria-selected='true'] {
+  color: white;
+  background-color: #1494b2;
+  font-weight: bold;
+  list-style-type: none;
+  box-shadow: 5px 0px 5px #d3d3d3;
+}
+
+.tab {
+  background-color: inherit;
+  float: left;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tab:hover {
+  color: white;
+  background-color: #2dbfcc;
+  font-weight: bold;
+}

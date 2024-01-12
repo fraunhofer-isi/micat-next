@@ -1,0 +1,22 @@
+# © 2024 Fraunhofer-Gesellschaft e.V., München
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+__pycache__
+.coverage
+*.coverage
+report.xml
+node_modules
+package-lock.json
+.next
+.out
+.swc
+.vscode
+.idea
+.settings.json
+launch.json
+logger.log
+pylint.log
+
+eslint.json
+out

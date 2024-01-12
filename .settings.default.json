@@ -1,0 +1,28 @@
+{
+  "frontEnd": {
+    "apiCalls": {
+      "useLocalApi": false
+    },
+    "useDefaultSavings": true,
+    "defaultSavings": [
+      ["Subsector", "Improvement", 2010, 2015, 2020, 2025, 2030],
+      ["Iron & steel", "Cross-cutting technologies", 0, 102.0, 232.2, 300, 400],
+      ["Average residential", "Building envelope", 0, 430, 774, 900, 1000],
+      [
+        "Average residential",
+        "Energy-efficient heating",
+        0,
+        516,
+        1204,
+        1500,
+        1700
+      ]
+    ],
+    "useDefaultMode": true,
+    "defaultMode": "ex-ante measures",
+    "useDefaultRegion": true,
+    "defaultRegion": "Poland",
+    "loadChartDescriptionsFromWeblication": false,
+    "chartDescriptionsUrl": "https://micatool-dev.eu/mica-tool/documentation/chart-descriptions.php"
+  }
+}

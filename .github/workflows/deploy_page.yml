@@ -1,0 +1,56 @@
+# © 2024 Fraunhofer-Gesellschaft e.V., München
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name: deploy page
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # The "*" (#42, asterisk) character has special semantics in YAML, so this
+    # string has to be quoted.
+    # Also see http://crontab.cronhub.io/
+    #
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - name: install dependencies
+        run: |
+          npx next telemetry disable
+          npm install
+      - name: build
+        run: |
+          cd front_end  
+          npm run build
+      - name: setup github pages
+        uses: actions/configure-pages@v3
+      - name: pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'out'
+      - name: deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v2

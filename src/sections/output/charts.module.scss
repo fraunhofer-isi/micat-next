@@ -1,0 +1,18 @@
+/*
+ * © 2024 Fraunhofer-Gesellschaft e.V., München
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+.chart-container {
+  // border: 1px solid #ccc;
+  border-top: none;
+  margin: inherit;
+  // border-radius: 0px 0px 5px 5px; 
+}
+
+.chart {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10 10 10  #ccc;
+}

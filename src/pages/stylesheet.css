@@ -1,0 +1,14 @@
+/*
+ * © 2024 Fraunhofer-Gesellschaft e.V., München
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+html,
+body {
+  font-family: FrutigerLTW02, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dc-legend-item  {
+    dominant-baseline: central;
+}

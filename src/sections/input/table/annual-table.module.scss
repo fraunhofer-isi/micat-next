@@ -1,0 +1,42 @@
+/*
+ * © 2024 Fraunhofer-Gesellschaft e.V., München
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+.annual-table {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.tabulator-menu {
+    z-index: 99999999;
+}
+
+.error-messages {
+  color: red;
+  font-weight: bold;
+}
+
+.icon-button {
+    border: 1px solid lightgrey;
+    background-color: #f8f9fa;
+    border-radius: 0.285rem;
+    padding:3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.icon-button:hover {
+    background-color: #e9ecef;
+}
+
+.icon-button svg {
+    position: relative;
+    bottom: .125em;
+    transform: scale(1.1);
+}

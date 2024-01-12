@@ -1,0 +1,28 @@
+/*
+ * © 2024 Fraunhofer-Gesellschaft e.V., München
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+.number-input-container {
+  display: flex;
+  margin: inherit;
+  align-items: center;
+}
+
+.number-input-label {
+  margin-right: 5px;
+}
+
+.number-input-endlabel {
+  margin-left: 5px;
+}
+
+.number-input-field {
+  width: 100%;
+}
+
+.number-input-field:invalid {
+  background-color: #f47920;
+  border-color: red;
+}
