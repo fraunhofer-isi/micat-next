@@ -127,7 +127,7 @@ of the back_end see the chapter `Configuration`.
 
 * Open Google Chrome and go to following url:
 
-`http://localhost:3000/`
+`http://localhost:3000/micat-next`
 
 ### Automate start of front_end
 

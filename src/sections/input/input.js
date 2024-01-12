@@ -35,7 +35,7 @@ export default function Input(properties) {
   const parameters = _Input.parameters(properties, setOptionalParameters);
 
   const projectLogo = <div className={styles['project-logo']}>
-    <Image src="../logo.svg" alt="logo"/>
+    <Image src="../logo.svg" alt="logo" width="150" height="50"/>
   </div>;
 
   const projectLinks = <div className={styles['project-links']}>
