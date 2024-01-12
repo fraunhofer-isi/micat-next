@@ -5,7 +5,7 @@
 const nextConfig = {
   output: 'export',
   // If you change the basePaths, also change path for favicon in src/pages/_document.js
-  basePath: '',
+  basePath: 'micat-next',
   reactStrictMode: true,
   images: {
     unoptimized: true // required for static export to work

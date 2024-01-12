@@ -9,7 +9,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="micat-next/favicon.ico" />
       </Head>
       <body>
         <Main />
