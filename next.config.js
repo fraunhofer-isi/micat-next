@@ -5,19 +5,19 @@
 const nextConfig = {
   output: 'export',
   // If you change the basePaths, also change path for favicon in src/pages/_document.js
-  basePath: 'micat-next',
+  basePath: '/micat-next',
   reactStrictMode: true,
   images: {
     unoptimized: true // required for static export to work
   },
   webpack: (config) => {
     config.resolve.fallback = {
-      'fs': false
+      fs: false
     };
     return config;
   },
   experimental: {
-   webpackBuildWorker: true
+    webpackBuildWorker: true
   }
 };
 
