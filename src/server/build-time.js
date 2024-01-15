@@ -122,7 +122,7 @@ export default class BuildTime extends General {
   }
 
   static _loadSettingsIfExist(){
-    const settingsPath = '../.settings.json';
+    const settingsPath = './.settings.json';
     const settingsExist = BuildTime._fileExists(settingsPath);
     if(settingsExist){
       const settings = BuildTime._readJson(settingsPath);
