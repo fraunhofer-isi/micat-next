@@ -2428,7 +2428,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.629
+ - electron-to-chromium@1.4.630
 
 This package contains the following license and notice below:
 
