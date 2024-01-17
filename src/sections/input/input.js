@@ -39,6 +39,14 @@ export default function Input(properties) {
   </div>;
 
   const projectLinks = <div className={styles['project-links']}>
+        <a
+          href="https://app.micatool.eu"
+          style={{
+            color: 'red'
+          }}
+        >
+          !!! This page is deprecated ! Go to https://app.micatool.eu !!!
+        </a>
         <a href="https://micatool.eu/">Project</a>
         <a href="https://doc.micatool.eu/">Documentation</a>
         <a href="https://micatool.eu/micat-project-en/data-protection/">Data protection</a>
