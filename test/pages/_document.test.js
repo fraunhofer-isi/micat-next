@@ -15,6 +15,6 @@ describe('main', () => {
     const head = children[0];
     const link = head.props.children;
     const href = link.props.href;
-    expect(href).toBe('/favicon.ico');
+    expect(href).toBe('micat-next/favicon.ico');
   });
 });

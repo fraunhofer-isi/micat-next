@@ -2,8 +2,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-/* eslint-disable max-lines */
-
 import React from 'react';
 import Image from 'next/image';
 import styles from './notice.module.scss';
@@ -21,5 +19,5 @@ export default function Notice() {
         Union’s Horizon 2020 research and innovation programme<br/>
         under grant agreement No. 101000132.
       </div>
-  </div>
+  </div>;
 }

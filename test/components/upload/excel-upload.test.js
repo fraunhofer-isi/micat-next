@@ -155,182 +155,222 @@ describe('_ExcelUpload', () => {
   });
 
   describe('_handleFile', () => {
-    it('handles file upload with context sheet', async () => {
-      const mockedFile = {
-        arrayBuffer: () => {}
-      };
+    describe('allowWithoutContext is truthy', () => {
+      describe('without context sheet', () => {
+        it('onlyFirstSheet is true', async () => {
+          const mockedFile = {
+            arrayBuffer: () => {}
+          };
 
-      // Mock the required functions
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
-      spyOn(_ExcelUpload, '_sheetExists').and.returnValue(true);
-      spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
-      spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
+          // Mock the required functions
+          window.alert = () => {};
+          spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+          spyOn(_ExcelUpload, '_sheetExists').and.returnValue(false);
+          spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+          spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
 
-      // Mock properties and setHasFile function
-      const properties = {
-        allowWithoutContext: false,
-        onlyFirstSheet: true,
-        change: jasmine.createSpy('change')
-      };
-      const setHasFile = jasmine.createSpy('setHasFile');
+          // Mock properties and setHasFile function
+          const properties = {
+            allowWithoutContext: true,
+            onlyFirstSheet: true,
+            change: jasmine.createSpy('change')
+          };
+          const setHasFile = jasmine.createSpy('setHasFile');
 
-      // Mock window.alert
-      const windowAlertSpy = spyOn(window, 'alert');
+          // Mock window.alert
+          const windowAlertSpy = spyOn(window, 'alert');
 
-      // Call the _handleFile function
-      await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
+          // Call the _handleFile function
+          await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
 
-      // Assert the expected function calls and values
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
-      expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
-      expect(_ExcelUpload._sheetToJson).toHaveBeenCalledWith('mocked_workbook');
-      expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
-      expect(setHasFile).toHaveBeenCalledWith(true);
-      expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
-      expect(windowAlertSpy).not.toHaveBeenCalled();
+          // Assert the expected function calls and values
+          expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+          expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+          expect(_ExcelUpload._sheetToJson).toHaveBeenCalled();
+          expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalledWith('mocked_workbook');
+          expect(setHasFile).toHaveBeenCalledWith(true);
+          expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
+          expect(windowAlertSpy).not.toHaveBeenCalled();
+        });
+
+        it('onlyFirstSheet is false', async () => {
+          const mockedFile = {
+            arrayBuffer: () => {}
+          };
+
+          // Mock the required functions
+          window.alert = () => {};
+          spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+          spyOn(_ExcelUpload, '_sheetExists').and.returnValue(false);
+          spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+          spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
+
+          // Mock properties and setHasFile function
+          const properties = {
+            allowWithoutContext: true,
+            onlyFirstSheet: false,
+            change: jasmine.createSpy('change')
+          };
+          const setHasFile = jasmine.createSpy('setHasFile');
+
+          // Mock window.alert
+          const windowAlertSpy = spyOn(window, 'alert');
+
+          // Call the _handleFile function
+          await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
+
+          // Assert the expected function calls and values
+          expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+          expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+          expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalled();
+          expect(_ExcelUpload._sheetsToJson).toHaveBeenCalledWith('mocked_workbook');
+          expect(setHasFile).toHaveBeenCalledWith(true);
+          expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
+          expect(windowAlertSpy).not.toHaveBeenCalled();
+        });
+      });
+
+      it('with context sheet', async () => {
+        const mockedFile = {
+          arrayBuffer: () => {}
+        };
+          // Mock the required functions
+        window.alert = () => {};
+        spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+        spyOn(_ExcelUpload, '_sheetExists').and.returnValue(true);
+        spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+        spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
+        // Mock properties and setHasFile function
+        const properties = {
+          allowWithoutContext: true,
+          onlyFirstSheet: false,
+          change: jasmine.createSpy('change')
+        };
+        const setHasFile = jasmine.createSpy('setHasFile');
+
+        // Mock window.alert
+        const windowAlertSpy = spyOn(window, 'alert');
+
+        // Call the _handleFile function
+        await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
+        // Assert the expected function calls and values
+        expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+        expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+        expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalledWith('mocked_workbook');
+        expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
+        expect(setHasFile).not.toHaveBeenCalled();
+        expect(properties.change).not.toHaveBeenCalled();
+        expect(windowAlertSpy).toHaveBeenCalledWith('Please check and upload the global parameters file');
+      });
     });
 
-    it('handles file upload without context sheet', async () => {
-      const mockedFile = {
-        arrayBuffer: () => {}
-      };
+    describe('allowWithoutContext is falsy', () => {
+      describe('with context sheet', () => {
+        it('onlyFirstShieet is true', async () => {
+          const mockedFile = {
+            arrayBuffer: () => {}
+          };
 
-      // Mock the required functions
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
-      spyOn(_ExcelUpload, '_sheetExists').and.returnValue(false);
-      spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
-      spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
+          // Mock the required functions
+          window.alert = () => {};
+          spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+          spyOn(_ExcelUpload, '_sheetExists').and.returnValue(true);
+          spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+          spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
 
-      // Mock properties and setHasFile function
-      const properties = {
-        allowWithoutContext: true,
-        onlyFirstSheet: false,
-        change: jasmine.createSpy('change')
-      };
-      const setHasFile = jasmine.createSpy('setHasFile');
+          // Mock properties and setHasFile function
+          const properties = {
+            allowWithoutContext: false,
+            onlyFirstSheet: true,
+            change: jasmine.createSpy('change')
+          };
+          const setHasFile = jasmine.createSpy('setHasFile');
 
-      // Mock window.alert
-      const windowAlertSpy = spyOn(window, 'alert');
+          // Mock window.alert
+          const windowAlertSpy = spyOn(window, 'alert');
 
-      // Call the _handleFile function
-      await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
+          // Call the _handleFile function
+          await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
 
-      // Assert the expected function calls and values
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
-      expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
-      expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalled();
-      expect(_ExcelUpload._sheetsToJson).toHaveBeenCalledWith('mocked_workbook');
-      expect(setHasFile).toHaveBeenCalledWith(true);
-      expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
-      expect(windowAlertSpy).not.toHaveBeenCalled();
-    });
+          // Assert the expected function calls and values
+          expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+          expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+          expect(_ExcelUpload._sheetToJson).toHaveBeenCalledWith('mocked_workbook');
+          expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
+          expect(setHasFile).toHaveBeenCalledWith(true);
+          expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
+          expect(windowAlertSpy).not.toHaveBeenCalled();
+        });
 
-    it('handles file upload without context sheet when context is allowed', async () => {
-      const mockedFile = {
-        arrayBuffer: () => {}
-      };
-      // Mock the required functions
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
-      spyOn(_ExcelUpload, '_sheetExists').and.returnValue(false);
-      spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
-      spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
-      // Mock properties and setHasFile function
-      const properties = {
-        allowWithoutContext: false,
-        onlyFirstSheet: true,
-        change: jasmine.createSpy('change')
-      };
-      const setHasFile = jasmine.createSpy('setHasFile');
+        it('onlyFirstShieet is false', async () => {
+          const mockedFile = {
+            arrayBuffer: () => {}
+          };
 
-      // Mock window.alert
-      const windowAlertSpy = spyOn(window, 'alert');
+          // Mock the required functions
+          window.alert = () => {};
+          spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+          spyOn(_ExcelUpload, '_sheetExists').and.returnValue(true);
+          spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+          spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
 
-      // Call the _handleFile function
-      await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
-      // Assert the expected function calls and values
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
-      expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
-      expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalled();
-      expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
-      expect(setHasFile).not.toHaveBeenCalled();
-      expect(properties.change).not.toHaveBeenCalled();
-      expect(windowAlertSpy).toHaveBeenCalledWith('Please check and upload the micat_measure file');
-    });
+          // Mock properties and setHasFile function
+          const properties = {
+            allowWithoutContext: false,
+            onlyFirstSheet: false,
+            change: jasmine.createSpy('change')
+          };
+          const setHasFile = jasmine.createSpy('setHasFile');
 
-    it('handles file upload with context sheet when context is not allowed', async () => {
-      const mockedFile = {
-        arrayBuffer: () => {}
-      };
-      // Mock the required functions
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
-      spyOn(_ExcelUpload, '_sheetExists').and.returnValue(true);
-      spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
-      spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
-      // Mock properties and setHasFile function
-      const properties = {
-        allowWithoutContext: true,
-        onlyFirstSheet: false,
-        change: jasmine.createSpy('change')
-      };
-      const setHasFile = jasmine.createSpy('setHasFile');
+          // Mock window.alert
+          const windowAlertSpy = spyOn(window, 'alert');
 
-      // Mock window.alert
-      const windowAlertSpy = spyOn(window, 'alert');
+          // Call the _handleFile function
+          await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
 
-      // Call the _handleFile function
-      await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
-      // Assert the expected function calls and values
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
-      expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
-      expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalledWith('mocked_workbook');
-      expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
-      expect(setHasFile).not.toHaveBeenCalled();
-      expect(properties.change).not.toHaveBeenCalled();
-      expect(windowAlertSpy).toHaveBeenCalledWith('Please check and upload the global parameters file');
-    });
+          // Assert the expected function calls and values
+          expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+          expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+          expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalledWith('mocked_workbook');
+          expect(_ExcelUpload._sheetsToJson).toHaveBeenCalled();
+          expect(setHasFile).toHaveBeenCalledWith(true);
+          expect(properties.change).toHaveBeenCalledWith('mocked_json_data');
+          expect(windowAlertSpy).not.toHaveBeenCalled();
+        });
+      });
 
-    _ExcelUpload._sheetToJson = jest.fn().mockReturnValue([{ cellA: 'dataA' }, { cellB: 'dataB' }]);
+      it('without context sheet', async () => {
+        const mockedFile = {
+          arrayBuffer: () => {}
+        };
+        // Mock the required functions
+        window.alert = () => {};
+        spyOn(_ExcelUpload, '_readWorkbook').and.returnValue('mocked_workbook');
+        spyOn(_ExcelUpload, '_sheetExists').and.returnValue(false);
+        spyOn(_ExcelUpload, '_sheetToJson').and.returnValue('mocked_json_data');
+        spyOn(_ExcelUpload, '_sheetsToJson').and.returnValue('mocked_json_data');
+        // Mock properties and setHasFile function
+        const properties = {
+          allowWithoutContext: false,
+          onlyFirstSheet: true,
+          change: jasmine.createSpy('change')
+        };
+        const setHasFile = jasmine.createSpy('setHasFile');
 
-    it('only first sheet', async () => {
-      const properties = {
-        onlyFirstSheet: true,
-        change: () => {}
-      };
-      spyOn(properties, 'change');
+        // Mock window.alert
+        const windowAlertSpy = spyOn(window, 'alert');
 
-      const mockedFile = {
-        arrayBuffer: async () => new ArrayBuffer(0) // A simple mock that returns an empty ArrayBuffer
-      };
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue(Promise.resolve({ SheetNames: ['sheetName'], Sheets: {} }));
-      const sheetToJsonSpy = jest.spyOn(_ExcelUpload, '_sheetToJson');
-      const sheetToJSONMock = jest.fn().mockReturnValue([]); // Mock the return value
-      jest.spyOn(xlsx.utils, 'sheet_to_json').mockImplementation(sheetToJSONMock);
-
-      await _ExcelUpload._handleFile(mockedFile, properties, () => {});
-
-      _ExcelUpload._sheetToJson(mockedFile);
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
-      expect(sheetToJsonSpy).toHaveBeenCalled();
-    });
-
-    it('all sheets', async () => {
-      const properties = {
-        onlyFirstSheet: false,
-        change: () => {}
-      };
-      spyOn(properties, 'change');
-
-      const mockedFile = {
-        arrayBuffer: async () => new ArrayBuffer(0) // A simple mock that returns an empty ArrayBuffer
-      };
-
-      spyOn(_ExcelUpload, '_readWorkbook').and.returnValue(Promise.resolve({ SheetNames: ['sheetName'], Sheets: {} }));
-      const sheetToJsonSpy = jest.spyOn(_ExcelUpload, '_sheetToJson');
-
-      await _ExcelUpload._handleFile('mocked_file', properties, () => {});
-      _ExcelUpload._sheetToJson(mockedFile);
-      expect(_ExcelUpload._readWorkbook).toHaveBeenCalled();
-      expect(sheetToJsonSpy).toHaveBeenCalled();
+        // Call the _handleFile function
+        await _ExcelUpload._handleFile(mockedFile, properties, setHasFile);
+        // Assert the expected function calls and values
+        expect(_ExcelUpload._readWorkbook).toHaveBeenCalledWith(mockedFile);
+        expect(_ExcelUpload._sheetExists).toHaveBeenCalledWith('mocked_workbook', 'context');
+        expect(_ExcelUpload._sheetToJson).not.toHaveBeenCalled();
+        expect(_ExcelUpload._sheetsToJson).not.toHaveBeenCalled();
+        expect(setHasFile).not.toHaveBeenCalled();
+        expect(properties.change).not.toHaveBeenCalled();
+        expect(windowAlertSpy).toHaveBeenCalledWith('Please check and upload the micat_measure file');
+      });
     });
   });
 
@@ -382,6 +422,14 @@ describe('_ExcelUpload', () => {
       secondSheetName: 'mocked_json'
     });
     xlsx.utils = utilsBackup;
+  });
+
+  it('_sheetExists', async () => {
+    const mockedWorkBook = {
+      SheetNames: ['mockedSheetName']
+    };
+    const result = _ExcelUpload._sheetExists(mockedWorkBook, 'mockedSheetName');
+    expect(result).toBe(true);
   });
 });
 /* eslint-enable max-lines */
