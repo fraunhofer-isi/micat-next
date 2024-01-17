@@ -7,6 +7,7 @@ import React from 'react';
 import Calculation from '../../calculation/calculation';
 import Input from '../input/input';
 import ChartSummary from '../output/chart-summary';
+import Notice from '../funding/notice';
 
 import styles from './indicators.module.scss';
 
@@ -42,6 +43,7 @@ export default function Indicators(properties) {
           <div className="col-sm-12 col-md-12 col-lg-12">
             {input}
             {chartSummary}
+            {Notice()}
           </div>
         </div>
       </div>
