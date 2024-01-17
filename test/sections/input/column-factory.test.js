@@ -42,72 +42,6 @@ describe('main', () => {
     // expect(ColumnFactory._handleCellClick).toHaveBeenCalled();
   });
 
-  it('should handle the cell click', () => {
-    jest.useFakeTimers();
-
-    const mockInputElement = document.createElement('input');
-    const mockQuerySelectorAll = jest.fn(() => [mockInputElement]);
-
-    const mockCell = {
-      getElement: jest.fn(() => ({
-        querySelectorAll: mockQuerySelectorAll
-      }))
-    };
-
-    const focusSpy = jest.spyOn(mockInputElement, 'focus');
-    const selectSpy = jest.spyOn(mockInputElement, 'select');
-
-    const setTimeoutMock = jest.fn(function_ => function_());
-    global.setTimeout = setTimeoutMock;
-
-    ColumnFactory._handleCellClick(mockCell);
-
-    expect(setTimeoutMock).toHaveBeenCalledTimes(1);
-
-    expect(focusSpy).toHaveBeenCalledTimes(1);
-    expect(selectSpy).toHaveBeenCalledTimes(1);
-
-    jest.useRealTimers();
-  });
-
-  it('should return the input element from the cell', () => {
-    const mockInputElement = document.createElement('input');
-    const mockQuerySelectorAll = jest.fn(() => [mockInputElement]);
-    const mockCell = {
-      getElement: jest.fn(() => ({
-        querySelectorAll: mockQuerySelectorAll
-      }))
-    };
-
-    const input = ColumnFactory._getInputFromCell(mockCell);
-
-    expect(mockCell.getElement).toHaveBeenCalledTimes(1);
-    expect(mockQuerySelectorAll).toHaveBeenCalledTimes(1);
-    expect(mockQuerySelectorAll).toHaveBeenCalledWith('input');
-    expect(input).toBe(mockInputElement);
-  });
-
-  it('should focus on and select the content of the cell input', () => {
-    const mockInputElement = document.createElement('input');
-    const mockQuerySelectorAll = jest.fn(() => [mockInputElement]);
-    const mockCell = {
-      getElement: jest.fn(() => ({
-        querySelectorAll: mockQuerySelectorAll
-      }))
-    };
-
-    const focusSpy = jest.spyOn(mockInputElement, 'focus');
-    const selectSpy = jest.spyOn(mockInputElement, 'select');
-
-    ColumnFactory._focusAndSelectContent(mockCell);
-
-    expect(mockCell.getElement).toHaveBeenCalledTimes(1);
-    expect(mockQuerySelectorAll).toHaveBeenCalledTimes(1);
-    expect(mockQuerySelectorAll).toHaveBeenCalledWith('input');
-    expect(focusSpy).toHaveBeenCalledTimes(1);
-    expect(selectSpy).toHaveBeenCalledTimes(1);
-  });
-
   it('createColumns', () => {
     const mockedHeaders = ['Subsector', 'ActionType', '2000'];
     spyOn(ColumnFactory, '_createBasicColumns').and.returnValue([
@@ -497,7 +431,9 @@ describe('main', () => {
     const mockedCell = {
       _cell: {
         row: {
-          data: 'mockedData'
+          data: {
+            unit: 'mocked_unit'
+          }
         }
       }
     };
@@ -512,11 +448,15 @@ describe('main', () => {
     };
     spyOn(mockedRuntime, 'apiCall').and.returnValue(Promise.resolve('mockedResult'));
 
+    const mockedGetPopulation = () => 'mocked_population';
+
     const result = await ColumnFactory._downloadMeasure(
       'mocked_fileName',
       mockedCell,
       mockedContext,
-      mockedRuntime
+      mockedRuntime,
+      'mockedUnit',
+      mockedGetPopulation
     );
     expect(result).toBe('mockedResult');
   });
@@ -565,36 +505,28 @@ describe('main', () => {
     let passedCellContent;
     spyOn(ReactDom, 'createRoot').and.returnValue({ render: cellContent => { passedCellContent = cellContent; } });
 
-    spyOn(ColumnFactory, '_hasDetails');
-
-    const result = ColumnFactory._formatDetailsCell('mockedCell');
+    const result = ColumnFactory._formatDetailsCell(
+      'mockedCell',
+      'mockedContext',
+      'mockedRuntime',
+      'mockedUnit',
+      'mockedGedPopulation'
+    );
     expect(result).toBe('mocked_div');
 
     const children = passedCellContent.props.children;
 
-    const upload = children[0];
-    const change = upload.props.change;
-    spyOn(ColumnFactory, '_uploadMeasure');
-    change();
-    expect(ColumnFactory._uploadMeasure).toBeCalled();
-
-    const download = children[1];
+    const download = children[0];
     const blob = download.props.blob;
     spyOn(ColumnFactory, '_downloadMeasure');
     await blob();
     expect(ColumnFactory._downloadMeasure).toBeCalled();
-  });
 
-  it('_hasDetails', () => {
-    const mockedData = {
-      details: {}
-    };
-
-    const mockedCell = {
-      getData: () => mockedData
-    };
-    const result = ColumnFactory._hasDetails(mockedCell);
-    expect(result).toBe(false);
+    const upload = children[1];
+    const change = upload.props.change;
+    spyOn(ColumnFactory, '_uploadMeasure');
+    change();
+    expect(ColumnFactory._uploadMeasure).toBeCalled();
   });
 
   describe('_listEditorFormatter', () => {

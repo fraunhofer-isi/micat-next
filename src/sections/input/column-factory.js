@@ -457,32 +457,19 @@ export default class ColumnFactory {
       <ExcelUpload
         title={'Upload'}
         onlyFirstSheet={false}
-        change={jsonData => ColumnFactory._uploadMeasure(jsonData, cell, context, unit, getPopulation)}
+        change={jsonData => ColumnFactory._uploadMeasure(
+          jsonData,
+          cell,
+          context,
+          unit,
+          getPopulation
+        )}
         // disabled={properties.disabled}
       />
     </>;
     cellRoot.render(cellContent);
 
     return div;
-  }
-
-  static _handleCellClick(cell) {
-    // without delayed execution it is unable to get the content of the cell
-    setTimeout(() => {
-      this._focusAndSelectContent(cell);
-    }, 0);
-  }
-
-  static _getInputFromCell(cell) {
-    const element = cell.getElement();
-    const input = element.querySelectorAll('input')[0];
-    return input;
-  }
-
-  static _focusAndSelectContent(cell) {
-    const input = this._getInputFromCell(cell);
-    input.focus();
-    input.select();
   }
 
   static _listEditorFormatter(cell){
