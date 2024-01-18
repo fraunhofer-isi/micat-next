@@ -73,6 +73,6 @@
     "jsdom": "23.2.0",
     "jsdom-worker": "0.3.0",
     "license-checker": "25.0.1",
-    "sass": "1.69.7"
+    "sass": "1.70.0"
   }
 }
