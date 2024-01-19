@@ -1,9 +1,3 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
@@ -1807,16 +1801,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The following npm package may be included in this product:
 
- - glob-to-regexp@0.4.1
-
-This package contains the following license and notice below:
-
-BSD-2-Clause
-
------------
-
-The following npm package may be included in this product:
-
  - async@3.2.5
 
 This package contains the following license and notice below:
@@ -2428,7 +2412,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.637
+ - electron-to-chromium@1.4.638
 
 This package contains the following license and notice below:
 
@@ -2601,35 +2585,6 @@ Files located in the node_modules and vendor directories are externally
 maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
-
------------
-
-The following npm package may be included in this product:
-
- - watchpack@2.4.0
-
-This package contains the following license and notice below:
-
-Copyright JS Foundation and other contributors
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -----------
 
@@ -5166,9 +5121,9 @@ copy of the Program in return for a fee.
 
 The following npm packages may be included in this product:
 
- - @next/env@14.0.4
- - @next/swc-linux-x64-gnu@14.0.4
- - @next/swc-linux-x64-musl@14.0.4
+ - @next/env@14.1.0
+ - @next/swc-linux-x64-gnu@14.1.0
+ - @next/swc-linux-x64-musl@14.1.0
  - @nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3
  - binary@0.3.0
  - client-only@0.0.1
@@ -6775,13 +6730,13 @@ THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - next@14.0.4
+ - next@14.1.0
 
 This package contains the following license and notice below:
 
 The MIT License (MIT)
 
-Copyright (c) 2023 Vercel, Inc.
+Copyright (c) 2024 Vercel, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
