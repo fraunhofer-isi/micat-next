@@ -1,9 +1,3 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
@@ -2150,7 +2144,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The following npm package may be included in this product:
 
- - spdx-exceptions@2.3.0
+ - spdx-exceptions@2.4.0
 
 This package contains the following license and notice below:
 
@@ -3388,7 +3382,7 @@ distributed under the terms of the MIT license above.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.642
+ - electron-to-chromium@1.4.645
 
 This package contains the following license and notice below:
 
