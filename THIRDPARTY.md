@@ -1,9 +1,3 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
@@ -1708,7 +1702,7 @@ The Apache Software Foundation (https://www.apache.org/).
 
 The following npm package may be included in this product:
 
- - caniuse-lite@1.0.30001579
+ - caniuse-lite@1.0.30001580
 
 This package contains the following license and notice below:
 
@@ -2435,7 +2429,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @babel/parser@7.23.6
+ - @babel/parser@7.23.9
 
 This package contains the following license and notice below:
 
@@ -3388,7 +3382,7 @@ distributed under the terms of the MIT license above.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.645
+ - electron-to-chromium@1.4.646
 
 This package contains the following license and notice below:
 
@@ -6553,10 +6547,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm packages may be included in this product:
 
- - @babel/cli@7.23.4
+ - @babel/cli@7.23.9
  - @babel/code-frame@7.23.5
  - @babel/compat-data@7.23.5
- - @babel/core@7.23.7
+ - @babel/core@7.23.9
  - @babel/generator@7.23.6
  - @babel/helper-compilation-targets@7.23.6
  - @babel/helper-environment-visitor@7.22.20
@@ -6569,11 +6563,11 @@ The following npm packages may be included in this product:
  - @babel/helper-string-parser@7.23.4
  - @babel/helper-validator-identifier@7.22.20
  - @babel/helper-validator-option@7.23.5
- - @babel/helpers@7.23.8
+ - @babel/helpers@7.23.9
  - @babel/highlight@7.23.4
- - @babel/template@7.22.15
- - @babel/traverse@7.23.7
- - @babel/types@7.23.6
+ - @babel/template@7.23.9
+ - @babel/traverse@7.23.9
+ - @babel/types@7.23.9
 
 These packages each contain the following license and notice below:
 
