@@ -1,9 +1,3 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
@@ -1365,7 +1359,7 @@ The Apache Software Foundation (https://www.apache.org/).
 
 The following npm package may be included in this product:
 
- - caniuse-lite@1.0.30001582
+ - caniuse-lite@1.0.30001584
 
 This package contains the following license and notice below:
 
@@ -2418,7 +2412,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.654
+ - electron-to-chromium@1.4.657
 
 This package contains the following license and notice below:
 
@@ -5539,7 +5533,7 @@ SOFTWARE.
 The following npm packages may be included in this product:
 
  - clsx@2.1.0
- - escalade@3.1.1
+ - escalade@3.1.2
 
 These packages each contain the following license and notice below:
 
