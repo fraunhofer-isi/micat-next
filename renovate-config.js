@@ -35,10 +35,6 @@ module.exports = {
      "minimumReleaseAge": null
     },
     {
-      "matchPackagePatterns": ["^actions/"],
-      "matchManagers": ["github-actions"]
-    },
-    {
       // eslint 9 is not supported by some packages, yet, for example
       // https://github.com/typescript-eslint/typescript-eslint/issues/8211
       // https://github.com/eslint-recommended/eslint-config/issues/5
