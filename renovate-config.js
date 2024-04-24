@@ -46,6 +46,10 @@ module.exports = {
       "allowedVersions": "8.56.0"
     },
     {
+      "matchPackageNames": ["eslint-plugin-n"],
+      "allowedVersions": "16.6.2"
+    },
+    {
       // eslint-recommended/eslint-config@16.0.3 requires eslint-plugin-unicorn@"48.0.0"
       "matchPackageNames": ["eslint-plugin-unicorn"],
       "allowedVersions": "48.0.0"
