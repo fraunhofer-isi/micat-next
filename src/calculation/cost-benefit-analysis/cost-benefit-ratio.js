@@ -2,15 +2,12 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-// eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable unused-imports/no-unused-vars */
-
 export default class CostBenefitRatio {
   static calculateCostBenefitRatio(
     measureSpecificParameters,
     annualMeasureSpecificParameters,
     measureSpecificResults,
-    userOptions
+    _userOptions
   ) {
     const costBenefitRatio = CostBenefitRatio._calculateCostBenefitRatio(
       measureSpecificResults.costBenefitAnalysisFacility.newInvestments.data[

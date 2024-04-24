@@ -2,7 +2,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable max-lines */
 import React from 'react';
 import Disableable from '../../../components/disableable/disableable';
@@ -356,3 +355,4 @@ export class _CostBenefitAnalysisCharts {
     return displayData;
   }
 }
+/* eslint-enable max-lines */
