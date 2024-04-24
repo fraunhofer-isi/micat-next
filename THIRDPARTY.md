@@ -1,15 +1,9 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
 The following npm package may be included in this product:
 
- - @ampproject/remapping@2.2.1
+ - @ampproject/remapping@2.3.0
 
 This package contains the following license and notice below:
 
@@ -219,7 +213,7 @@ Apache License
 
 The following npm package may be included in this product:
 
- - source-map-js@1.0.2
+ - source-map-js@1.2.0
 
 This package contains the following license and notice below:
 
@@ -915,7 +909,7 @@ Apache License
 
 The following npm package may be included in this product:
 
- - @swc/helpers@0.5.2
+ - @swc/helpers@0.5.5
 
 This package contains the following license and notice below:
 
@@ -1351,12 +1345,12 @@ The above copyright notice and this permission notice shall be included in all c
 
 The following npm package may be included in this product:
 
- - echarts@5.4.3
+ - echarts@5.5.0
 
 This package contains the following license and notice below:
 
 Apache ECharts
-Copyright 2017-2023 The Apache Software Foundation
+Copyright 2017-2024 The Apache Software Foundation
 
 This product includes software developed at
 The Apache Software Foundation (https://www.apache.org/).
@@ -1365,7 +1359,17 @@ The Apache Software Foundation (https://www.apache.org/).
 
 The following npm package may be included in this product:
 
- - caniuse-lite@1.0.30001584
+ - @swc/counter@0.1.3
+
+This package contains the following license and notice below:
+
+Apache-2.0
+
+-----------
+
+The following npm package may be included in this product:
+
+ - caniuse-lite@1.0.30001612
 
 This package contains the following license and notice below:
 
@@ -1769,7 +1773,7 @@ Creative Commons may be contacted at creativecommons.org.
 
 The following npm package may be included in this product:
 
- - zrender@5.4.4
+ - zrender@5.5.0
 
 This package contains the following license and notice below:
 
@@ -1956,7 +1960,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @babel/parser@7.23.9
+ - @babel/parser@7.24.4
 
 This package contains the following license and notice below:
 
@@ -2418,7 +2422,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.657
+ - electron-to-chromium@1.4.747
 
 This package contains the following license and notice below:
 
@@ -2448,7 +2452,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm package may be included in this product:
 
- - @jridgewell/resolve-uri@3.1.1
+ - @jridgewell/resolve-uri@3.1.2
 
 This package contains the following license and notice below:
 
@@ -2476,8 +2480,8 @@ SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @jridgewell/gen-mapping@0.3.3
- - @jridgewell/set-array@1.1.2
+ - @jridgewell/gen-mapping@0.3.5
+ - @jridgewell/set-array@1.2.1
 
 These packages each contain the following license and notice below:
 
@@ -2505,7 +2509,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @jridgewell/trace-mapping@0.3.22
+ - @jridgewell/trace-mapping@0.3.25
 
 This package contains the following license and notice below:
 
@@ -2766,7 +2770,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - sass@1.70.0
+ - sass@1.75.0
 
 This package contains the following license and notice below:
 
@@ -3389,6 +3393,32 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 --------------------------------------------------------------------------------
 
+dart_mappable and type_plus license:
+
+MIT License
+
+Copyright (c) 2021 Kilian Schulte
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+
 ffi and package_config license:
 
 Copyright 2019, the Dart project authors. 
@@ -3717,6 +3747,39 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 markdown license:
 
 Copyright 2012, the Dart project authors. 
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of Google LLC nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+--------------------------------------------------------------------------------
+
+native_stack_traces license:
+
+Copyright 2020, the Dart project authors.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -5127,9 +5190,9 @@ copy of the Program in return for a fee.
 
 The following npm packages may be included in this product:
 
- - @next/env@14.1.0
- - @next/swc-linux-x64-gnu@14.1.0
- - @next/swc-linux-x64-musl@14.1.0
+ - @next/env@14.2.2
+ - @next/swc-linux-x64-gnu@14.2.2
+ - @next/swc-linux-x64-musl@14.2.2
  - @nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3
  - binary@0.3.0
  - client-only@0.0.1
@@ -5285,27 +5348,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm packages may be included in this product:
 
- - @babel/cli@7.23.9
- - @babel/code-frame@7.23.5
- - @babel/compat-data@7.23.5
- - @babel/core@7.23.9
- - @babel/generator@7.23.6
+ - @babel/cli@7.24.1
+ - @babel/code-frame@7.24.2
+ - @babel/compat-data@7.24.4
+ - @babel/core@7.24.4
+ - @babel/generator@7.24.4
  - @babel/helper-compilation-targets@7.23.6
  - @babel/helper-environment-visitor@7.22.20
  - @babel/helper-function-name@7.23.0
  - @babel/helper-hoist-variables@7.22.5
- - @babel/helper-module-imports@7.22.15
+ - @babel/helper-module-imports@7.24.3
  - @babel/helper-module-transforms@7.23.3
  - @babel/helper-simple-access@7.22.5
  - @babel/helper-split-export-declaration@7.22.6
- - @babel/helper-string-parser@7.23.4
+ - @babel/helper-string-parser@7.24.1
  - @babel/helper-validator-identifier@7.22.20
  - @babel/helper-validator-option@7.23.5
- - @babel/helpers@7.23.9
- - @babel/highlight@7.23.4
- - @babel/template@7.23.9
- - @babel/traverse@7.23.9
- - @babel/types@7.23.9
+ - @babel/helpers@7.24.4
+ - @babel/highlight@7.24.2
+ - @babel/template@7.24.0
+ - @babel/traverse@7.24.1
+ - @babel/types@7.24.0
 
 These packages each contain the following license and notice below:
 
@@ -5454,12 +5517,11 @@ SOFTWARE.
 
 -----------
 
-The following npm packages may be included in this product:
+The following npm package may be included in this product:
 
- - binary-extensions@2.2.0
  - is-binary-path@2.1.0
 
-These packages each contain the following license and notice below:
+This package contains the following license and notice below:
 
 MIT License
 
@@ -5475,7 +5537,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm package may be included in this product:
 
- - react-bootstrap-icons@1.10.3
+ - react-bootstrap-icons@1.11.4
 
 This package contains the following license and notice below:
 
@@ -5538,7 +5600,7 @@ SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - clsx@2.1.0
+ - clsx@2.1.1
  - escalade@3.1.2
 
 These packages each contain the following license and notice below:
@@ -5546,6 +5608,25 @@ These packages each contain the following license and notice below:
 MIT License
 
 Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-----------
+
+The following npm package may be included in this product:
+
+ - binary-extensions@2.3.0
+
+This package contains the following license and notice below:
+
+MIT License
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+Copyright (c) Paul Miller (https://paulmillr.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -5855,7 +5936,6 @@ The following npm packages may be included in this product:
  - minimatch@3.1.2
  - once@1.4.0
  - rimraf@2.7.1
- - rimraf@3.0.2
  - semver@5.7.2
  - semver@6.3.1
  - wrappy@1.0.2
@@ -6133,13 +6213,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm package may be included in this product:
 
- - bootstrap@5.3.2
+ - bootstrap@5.3.3
 
 This package contains the following license and notice below:
 
 The MIT License (MIT)
 
-Copyright (c) 2011-2023 The Bootstrap Authors
+Copyright (c) 2011-2024 The Bootstrap Authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -6163,7 +6243,7 @@ THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - chokidar@3.5.3
+ - chokidar@3.6.0
 
 This package contains the following license and notice below:
 
@@ -6253,7 +6333,7 @@ THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - tmp@0.2.1
+ - tmp@0.2.3
 
 This package contains the following license and notice below:
 
@@ -6556,7 +6636,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - tabulator-tables@5.5.4
+ - tabulator-tables@6.2.0
 
 This package contains the following license and notice below:
 
@@ -6736,7 +6816,7 @@ THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - next@14.1.0
+ - next@14.2.2
 
 This package contains the following license and notice below:
 
@@ -6888,7 +6968,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - browserslist@4.22.3
+ - browserslist@4.23.0
 
 This package contains the following license and notice below:
 
