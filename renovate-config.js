@@ -35,6 +35,13 @@ module.exports = {
      "minimumReleaseAge": null
     },
     {
+      // eslint 9 is not supported by some packages, yet, for example
+      // https://github.com/typescript-eslint/typescript-eslint/issues/8211
+      // https://github.com/eslint-recommended/eslint-config/issues/5
+      "matchPackageNames": ["eslint"],
+      "allowedVersions": "8.56.0"
+    },
+    {
       // eslint-recommended/eslint-config@16.0.3 requires eslint-plugin-unicorn@"48.0.0"
       "matchPackageNames": ["eslint-plugin-unicorn"],
       "allowedVersions": "48.0.0"

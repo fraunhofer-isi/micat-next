@@ -1,7 +1,14 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "@eslint-recommended"
+    // '@eslint-recommended' is not compatible to eslint version 9
+    // Therefore, we manually include the content of @eslint-recommended
+    // https://github.com/eslint-recommended/eslint-config/blob/main/index.js
+    "standard",
+    "plugin:unicorn/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:@eslint-community/eslint-comments/recommended",
+    "plugin:jsdoc/recommended"
   ],
   "plugins": [
     "folders",
