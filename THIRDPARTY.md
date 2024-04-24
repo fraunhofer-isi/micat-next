@@ -5198,7 +5198,6 @@ The following npm packages may be included in this product:
 
  - @next/env@14.2.2
  - @next/swc-linux-x64-gnu@14.2.2
- - @next/swc-linux-x64-musl@14.2.2
  - @nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3
  - binary@0.3.0
  - client-only@0.0.1
