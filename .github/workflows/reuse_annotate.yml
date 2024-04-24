@@ -27,7 +27,7 @@ jobs:
           # Also see https://reuse.readthedocs.io/en/v2.1.0/usage.html
           # The copyright style follows the one used at https://www.fraunhofer.de/en/publishing-notes.html
           # Currently only src and test folders and THIRDPARTY.md are considered for
-          # automated annotations. Otherwise unwanted license files for *.json files would be created.
+          # automated annotations. Otherwise, unwanted license files for *.json files would be created.
           # Also see https://stackoverflow.com/questions/77806897/how-to-skip-json-files-with-dep5-when-creating-reuse-annotations
           # => You might need to manually trigger the creation of annotations for extra files.           
           args: annotate --copyright="Fraunhofer-Gesellschaft e.V., München" --copyright-style=symbol --merge-copyrights --license=AGPL-3.0-or-later --skip-unrecognised --recursive src test THIRDPARTY.md
