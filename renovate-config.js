@@ -37,7 +37,7 @@ module.exports = {
     {
       "matchPackagePatterns": ["^actions/"],
       "matchManagers": ["github-actions"]
-    }
+    },
     {
       // eslint 9 is not supported by some packages, yet, for example
       // https://github.com/typescript-eslint/typescript-eslint/issues/8211
