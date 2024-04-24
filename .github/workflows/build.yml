@@ -18,7 +18,7 @@ jobs:
     - name: set up node 
       uses: actions/setup-node@v4
       with:
-        node-version: 'lts/latest'
+        node-version: 'latest'
     - name: install dependencies
       run: |  
         npx next telemetry disable
