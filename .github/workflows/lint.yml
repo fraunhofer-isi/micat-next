@@ -15,10 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Extract Node.js version
+      run: echo "::set-env name=NODE_VERSION::$(node -p "require('./package.json').engines.node")"
     - name: set up node 
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ env.npm_package_engines_node}}
+        node-version: ${{ env.NODE_VERSION}}
     - name: install dependencies
       run: |  
         npx next telemetry disable
