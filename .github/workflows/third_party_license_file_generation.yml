@@ -17,11 +17,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Extract Node.js version
       id: extract-node-version
-      run: echo "::set-output name=node_version::$(node -p "require('./package.json').engines.node")"
-    - name: set up node
+      run: echo "NODE_VERSION=$(node -p "require('./package.json').engines.node")" >> $GITHUB_ENV
+    - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ steps.extract-node-version.outputs.node_version }}
+        node-version: ${{ env.NODE_VERSION }}
     - name: install dependencies
       run: |       
         npx next telemetry disable
