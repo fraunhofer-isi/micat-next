@@ -1375,7 +1375,7 @@ Apache-2.0
 
 The following npm package may be included in this product:
 
- - caniuse-lite@1.0.30001612
+ - caniuse-lite@1.0.30001615
 
 This package contains the following license and notice below:
 
@@ -1966,7 +1966,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @babel/parser@7.24.4
+ - @babel/parser@7.24.5
 
 This package contains the following license and notice below:
 
@@ -2428,7 +2428,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.747
+ - electron-to-chromium@1.4.754
 
 This package contains the following license and notice below:
 
@@ -2776,7 +2776,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - sass@1.75.0
+ - sass@1.76.0
 
 This package contains the following license and notice below:
 
@@ -3957,32 +3957,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
---------------------------------------------------------------------------------
-
-pointycastle license:
-
-
-Copyright (c) 2000 - 2019 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 
 
 --------------------------------------------------------------------------------
@@ -5353,27 +5327,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm packages may be included in this product:
 
- - @babel/cli@7.24.1
+ - @babel/cli@7.24.5
  - @babel/code-frame@7.24.2
  - @babel/compat-data@7.24.4
- - @babel/core@7.24.4
- - @babel/generator@7.24.4
+ - @babel/core@7.24.5
+ - @babel/generator@7.24.5
  - @babel/helper-compilation-targets@7.23.6
  - @babel/helper-environment-visitor@7.22.20
  - @babel/helper-function-name@7.23.0
  - @babel/helper-hoist-variables@7.22.5
  - @babel/helper-module-imports@7.24.3
- - @babel/helper-module-transforms@7.23.3
- - @babel/helper-simple-access@7.22.5
- - @babel/helper-split-export-declaration@7.22.6
+ - @babel/helper-module-transforms@7.24.5
+ - @babel/helper-simple-access@7.24.5
+ - @babel/helper-split-export-declaration@7.24.5
  - @babel/helper-string-parser@7.24.1
- - @babel/helper-validator-identifier@7.22.20
+ - @babel/helper-validator-identifier@7.24.5
  - @babel/helper-validator-option@7.23.5
- - @babel/helpers@7.24.4
- - @babel/highlight@7.24.2
+ - @babel/helpers@7.24.5
+ - @babel/highlight@7.24.5
  - @babel/template@7.24.0
- - @babel/traverse@7.24.1
- - @babel/types@7.24.0
+ - @babel/traverse@7.24.5
+ - @babel/types@7.24.5
 
 These packages each contain the following license and notice below:
 
@@ -5494,7 +5468,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - dayjs@1.11.10
+ - dayjs@1.11.11
 
 This package contains the following license and notice below:
 
@@ -5572,10 +5546,10 @@ SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - react-dom@18.2.0
+ - react-dom@18.3.1
  - react-is@16.13.1
- - react@18.2.0
- - scheduler@0.23.0
+ - react@18.3.1
+ - scheduler@0.23.2
 
 These packages each contain the following license and notice below:
 
@@ -6641,7 +6615,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - tabulator-tables@6.2.0
+ - tabulator-tables@6.2.1
 
 This package contains the following license and notice below:
 
@@ -7031,7 +7005,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - update-browserslist-db@1.0.13
+ - update-browserslist-db@1.0.14
 
 This package contains the following license and notice below:
 
