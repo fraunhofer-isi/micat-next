@@ -24,4 +24,3 @@ jobs:
         uses: renovatebot/github-action@v40.1.11
         with:
           token: ${{ secrets.RENOVATE_TOKEN }}
-          configurationFile: renovate-config.js
