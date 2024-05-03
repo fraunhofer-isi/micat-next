@@ -10,14 +10,16 @@
 
 module.exports = {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+    "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard"
+  ],
   "onboarding": false,
   "requireConfig": "optional",
   "platform": "github",
   "forkProcessing": "enabled",
   "dryRun": null, //"full",  // use full to only log messages instead of creating pull requests
   "autodiscover": true,
-  "dependencyDashboard": false,
   "packageRules": [
     {
      "description": "lockFileMaintenance",
