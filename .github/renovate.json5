@@ -8,7 +8,7 @@
 // https://github.com/renovatebot/github-action
 // https://docs.renovatebot.com/self-hosted-configuration/
 
-module.exports = {
+{
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
     "config:recommended",
@@ -59,4 +59,4 @@ module.exports = {
       "allowedVersions": "46.9.1"
     }
   ]
-};
+}
