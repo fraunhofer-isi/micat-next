@@ -33,11 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Extract Node.js version
-        id: extract-node-version
-        run: echo "NODE_VERSION=$(node -p "require('./package.json').engines.node")" >> $GITHUB_ENV
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: extract node version
+        uses: ./.github/actions/extract-node-version
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: install dependencies
