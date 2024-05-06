@@ -1,9 +1,3 @@
-<!--
-© 2024 Fraunhofer-Gesellschaft e.V., München
-
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 This file was generated with the generate-license-file npm package!
 https://www.npmjs.com/package/generate-license-file
 
@@ -1375,7 +1369,7 @@ Apache-2.0
 
 The following npm package may be included in this product:
 
- - caniuse-lite@1.0.30001615
+ - caniuse-lite@1.0.30001616
 
 This package contains the following license and notice below:
 
@@ -2428,7 +2422,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - electron-to-chromium@1.4.754
+ - electron-to-chromium@1.4.756
 
 This package contains the following license and notice below:
 
@@ -7005,7 +6999,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - update-browserslist-db@1.0.14
+ - update-browserslist-db@1.0.15
 
 This package contains the following license and notice below:
 
