@@ -63,7 +63,7 @@
     "eslint-plugin-n": "17.15.0",
     "eslint-plugin-promise": "6.6.0",
     "eslint-plugin-react-hooks": "5.1.0",
-    "eslint-plugin-sonarjs": "0.25.1",
+    "eslint-plugin-sonarjs": "3.0.1",
     "eslint-plugin-unicorn": "53.0.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "generate-license-file": "^3.0.1",
