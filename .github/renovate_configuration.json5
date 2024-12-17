@@ -16,7 +16,7 @@
   ],
   "forkProcessing": "enabled",
   "autodiscover": true,
-  "autodiscoverFilter": ["micat-next"],
+  "autodiscoverFilter": ["fraunhofer-isi/micat-next"],
   "packageRules": [
     {
      "description": "lockFileMaintenance",
