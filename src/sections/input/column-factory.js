@@ -486,7 +486,7 @@ export default class ColumnFactory {
 
   static _optionFormatter(_label, value){
     const stringValue = value.toString();
-    const fixedStringValue = stringValue.replace('&', '%26');
+    const fixedStringValue = stringValue.replace(/&/g, '%26');
     return fixedStringValue;
   }
 
