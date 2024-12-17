@@ -41,6 +41,13 @@
       "allowedVersions": "18.3.1"
     },
     {
+      // react 19 is not supported by react-tabs, yet
+      // also see https://github.com/reactjs/react-tabs/issues/569
+      "matchPackageNames": ["react-dom"],
+      "allowedVersions": "18.3.1"
+    },
+
+    {
       // eslint 9 is not supported by some packages, yet, for example
       // https://github.com/typescript-eslint/typescript-eslint/issues/8211
       // https://github.com/eslint-recommended/eslint-config/issues/231
