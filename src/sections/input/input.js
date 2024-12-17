@@ -271,7 +271,7 @@ export class _Input {
       fileName;
     if (savings) {
       let savingsString = JSON.stringify(savings);
-      savingsString = savingsString.replace(/&/g, '%26');
+      savingsString = savingsString.replaceAll('&', '%26');
       route = route + '&savings=' + savingsString;
     }
     const savingsBlob = await runtime.apiCall(route);
