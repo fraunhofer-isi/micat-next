@@ -66,11 +66,11 @@
     {
       // eslint-recommended/eslint-config@26.1.1 requires  eslint-plugin-jsdoc@"^48.0.0"
       "matchPackageNames": ["eslint-plugin-jsdoc"],
-      "allowedVersions": "48.0.0"
+      "allowedVersions": "48.11.0"
     },
     {
       "matchPackageNames": ["eslint-plugin-promise"],
-      "allowedVersions": "6.0.0"
+      "allowedVersions": "6.6.0"
     },
     {
       "matchPackageNames": ["@typescript-eslint/parser"],
