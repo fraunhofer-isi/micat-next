@@ -20,8 +20,11 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
+    - name: install cairo
+      run: |
+        sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
     - name: install dependencies
-      run: |  
+      run: |          
         npx next telemetry disable
         npm install       
     - name: lint
