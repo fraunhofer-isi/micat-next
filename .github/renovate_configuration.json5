@@ -16,6 +16,7 @@
   ],
   "forkProcessing": "enabled",
   "autodiscover": true,
+  "autodiscoverFilter": ["micat-next"],
   "packageRules": [
     {
      "description": "lockFileMaintenance",
