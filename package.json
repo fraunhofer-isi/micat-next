@@ -4,7 +4,7 @@
   "license": "AGPL-3.0-or-later",
   "private": true,
   "engines": {
-    "node": "23.3.0"
+    "node": "23.4.0"
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
@@ -32,7 +32,7 @@
     "next": "15.1.0",
     "react": "18.3.1",
     "react-bootstrap-icons": "1.11.5",
-    "react-dom": "18.3.1",
+    "react-dom": "19.0.0",
     "react-tabs": "6.0.2",
     "tabulator-tables": "6.3.0",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
