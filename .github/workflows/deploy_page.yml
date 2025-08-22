@@ -51,7 +51,7 @@ jobs:
       - name: setup github pages
         uses: actions/configure-pages@v5
       - name: pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: 'out'
       - name: deploy to github pages
