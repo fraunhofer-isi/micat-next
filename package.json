@@ -77,6 +77,6 @@
     "jsdom": "28.1.0",
     "jsdom-worker": "0.3.0",
     "license-checker": "25.0.1",
-    "sass": "1.83.0"
+    "sass": "1.97.3"
   }
 }
