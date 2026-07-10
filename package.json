@@ -70,7 +70,7 @@
     "glob-parent": "6.0.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "30.4.2",
-    "jest-canvas-mock": "2.5.2",
+    "jest-canvas-mock": "2.5.8",
     "jest-cli": "30.4.2",
     "jest-environment-jsdom": "30.4.1",
     "jest-jasmine2": "30.4.2",
